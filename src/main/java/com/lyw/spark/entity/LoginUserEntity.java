@@ -1,5 +1,6 @@
 package com.lyw.spark.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,8 +9,9 @@ import java.util.Date;
  * @author liangyuwu
  * @Time 2018/11/30 15:20
  */
-public class LoginUserEntity {
+public class LoginUserEntity implements Serializable{
 
+    private static final long serialVersionUID = 356509814460050431L;
     private String userId;
     private String userName;
     private String sessionId;

@@ -5,7 +5,7 @@ import com.lyw.spark.entity.LoginUserEntity
 import com.lyw.spark.scala.service.LoginAction
 import org.apache.spark.sql.SparkSession
 
-class LoginActionImpl {
+class LoginActionImpl extends Serializable{
 
 //  case class LoginUserEntity();
 
@@ -13,7 +13,7 @@ class LoginActionImpl {
       val userEntity = new LoginUserEntity()
       val rdd = line.split("\\s+").foreach(word => {
         println(word)
-//        userEntity.setUserName("lyw")
+        userEntity.setUserName("lyw")
       })
       return userEntity
   }
@@ -40,6 +40,7 @@ class LoginActionImpl {
       }
 
       case e :Exception =>{
+        e.printStackTrace()
         println("系统异常:"+e.getMessage)
       }
     }
@@ -52,7 +53,7 @@ object LoginActionImpl{
   def main(args: Array[String]): Unit = {
     val loginaction = new LoginActionImpl()
 //    val list = loginaction.document("D:\\export\\sso.txt")
-    val list = loginaction.document("C:\\Users\\liangyuwu\\Downloads\\catalina.out")
+    val list = loginaction.document("C:\\Users\\liangyuwu\\Downloads\\catalina.txt")
 //    loginaction.packageEntity("tesfsdf\\sfsdfasd")
     println(list)
   }
