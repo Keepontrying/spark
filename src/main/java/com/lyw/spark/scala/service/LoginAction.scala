@@ -7,7 +7,6 @@ import com.lyw.spark.entity.LoginUserEntity
 
 trait LoginAction{
 
-  case class LoginUserEntity();
 
   //封装每一行为数据对象
   def packageEntity(line:String):LoginUserEntity;
