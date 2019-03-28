@@ -80,7 +80,7 @@ object LoginActionImpl{
 //    val list = loginaction.document("D:\\export\\sso.txt")
 //    val list = loginaction.document("C:\\Users\\liangyuwu\\Downloads\\catalina.txt")
 //    loginaction.packageEntity("tesfsdf\\sfsdfasd")
-    val list = loginaction.hdfs("hdfs://192.168.1.14:9000/user/wangxiaowu/test.txt")
+    val list = loginaction.hdfs("hdfs://192.168.1.13:9000/user/wangxiaowu/test.txt")
     println("测试数据："+list)
   }
 }
