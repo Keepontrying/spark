@@ -29,5 +29,6 @@ public class SparkController {
     @RequestMapping("/content")
     protected String getContents(@RequestParam String filePath) {
         return new SparkApp().analyText(filePath);
+//        return null;
     }
 }
