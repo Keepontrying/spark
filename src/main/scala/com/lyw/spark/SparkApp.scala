@@ -3,7 +3,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 import scala.io.Source
 import scala.tools.nsc.io.JFile
 
-object SparkApp{
+class SparkApp{
 
   def main(args: Array[String]) {
     myFunc("myApp")

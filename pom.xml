@@ -101,9 +101,12 @@
 				<artifactId>maven-scala-plugin</artifactId>
 				<executions>
 					<execution>
+						<!--调用关系，所以先要编译scala,否则找不到包-->
+						<id>scala-compile-first</id>
+						<phase>process-resources</phase>
 						<goals>
+							<goal>add-source</goal>
 							<goal>compile</goal>
-							<goal>testCompile</goal>
 						</goals>
 					</execution>
 				</executions>

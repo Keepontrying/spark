@@ -1,6 +1,6 @@
 package com.lyw.spark.controller;
 
-import com.lyw.spark.scala.SparkApp;
+import com.lyw.spark.service.impl.LoginActionImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
+/**Ø
  * 类描述：spark
  *
  * @author liangyuwu
@@ -28,7 +28,8 @@ public class SparkController {
     @ResponseBody
     @RequestMapping("/content")
     protected String getContents(@RequestParam String filePath) {
-        return new SparkApp().analyText(filePath);
+        LoginActionImpl loginAction = new LoginActionImpl();
+        return loginAction.hdfs("tes");
 //        return null;
     }
 }
